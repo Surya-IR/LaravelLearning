@@ -13,5 +13,16 @@
                     </div>
                 </div>
             </div>
+            @foreach($chirps as $chirp)
+            <div class="card bg-base-100 shadow mt-8">
+                <div class="card-body">
+                    <div>
+                        <h1 class="text-3xl font-bold">From: {{$chirp['author']}}</h1>
+                        <p class="mt-4 text-base-content/60">{{$chirp['message']}}</p>
+                            <p class="mt-2 text-sm text-gray-600">Posted:{{$chirp['time']}}</p>
+                    </div>
+                </div>
+            </div>
+                @endforeach
         </div>
 </x-layout>
